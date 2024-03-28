@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unitel_money/public/components/space.dart';
 import 'package:unitel_money/public/style/colores.dart';
 
 class Pagev2 extends StatelessWidget {
@@ -31,26 +32,31 @@ class Pagev2 extends StatelessWidget {
         ),
         SizedBox(
           width: size.width * .8,
-          child: Text(
-            "Faça pagamentos de Forma digital ",
-            maxLines: 2,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: size.width * .08,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
+          child: FittedBox(
+            child: Text(
+              "A sua carteira Digital\nsempre em mãos",
+              maxLines: 2,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: size.width * .08,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
+        Spacing(value: .03),
         SizedBox(
           width: size.width * .7,
-          child: Text(
-            "Aproveite o momento para reservar o que deseja comer no dia de hoje, não espere o dia de amanhã.",
-            maxLines: 3,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: size.width * .05,
-              color: colores.secundarydark,
+          child: FittedBox(
+            child: Text(
+              "Aproveite o momento para reservar o que\n deseja comer no dia de hoje, não espere o dia\n de amanhã.",
+              maxLines: 3,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: size.width * .05,
+                color: colores.secundarydark,
+              ),
             ),
           ),
         ),

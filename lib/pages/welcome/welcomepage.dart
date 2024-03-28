@@ -70,7 +70,7 @@ class _WelcomePageState extends State<WelcomePage> {
         children: [
           SizedBox(height: size.height * 0.05),
           SizedBox(
-            height: size.height * 0.6, // Defina uma altura fixa para o PageView
+            height: size.height * 0.7, // Defina uma altura fixa para o PageView
             child: PageView.builder(
               controller: pagController, // Use pagController here
               itemCount: scrollpages.length,
@@ -79,7 +79,7 @@ class _WelcomePageState extends State<WelcomePage> {
               },
             ),
           ),
-          SizedBox(height: size.height * 0.02),
+        //  SizedBox(height: size.height * 0.02),
           SmoothPageIndicator(
             controller: pagController, // Use pagController here
             count: scrollpages.length,
