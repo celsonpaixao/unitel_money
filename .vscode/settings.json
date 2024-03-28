@@ -1,0 +1,7 @@
+{
+    "dart.previewFlutterUiGuides": true,
+    "dart.previewFlutterUiGuidesCustomTracking": true,
+    "dart.previewHotReloadOnSaveWatcher": true,
+    "dart.flutterHotReloadOnSave": "manualIfDirty",
+    "dart.hotReloadOnSave": "manualIfDirty"
+}

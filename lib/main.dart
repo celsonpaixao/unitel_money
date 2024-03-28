@@ -23,7 +23,10 @@ class MyApp extends StatelessWidget {
             systemOverlayStyle: SystemUiOverlayStyle.light,
             toolbarHeight: 0,
             backgroundColor: Colors.transparent,
-          )),
+          ),
+          textButtonTheme: TextButtonThemeData(
+              style: ButtonStyle(
+                  foregroundColor: MaterialStatePropertyAll(Colors.white)))),
       home: WelcomePage(),
     );
   }
