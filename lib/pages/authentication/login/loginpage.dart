@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:unitel_money/pages/authentication/joinus/joinuspage.dart';
 import 'package:unitel_money/pages/authentication/login/components/card_social.dart';
 import 'package:unitel_money/public/components/actionbutton.dart';
 import 'package:unitel_money/public/components/globalinput.dart';
@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               Spacing(value: 0.04),
               Header(text: "Sign In"),
-               Spacing(value: 0.04),
+              Spacing(value: 0.04),
               GlobalInput(
                 Visibillity: false,
                 type: TextInputType.number,
@@ -43,11 +43,12 @@ class _LoginPageState extends State<LoginPage> {
                   size: 20,
                 ),
               ),
-               Spacing(value: 0.02),
+              Spacing(value: 0.02),
               GlobalInput(
                 Visibillity: _isVisiblePassword,
                 type: TextInputType.number,
-                PreffixIcon: Icon(Icons.lock_outline_rounded, color: Colors.white),
+                PreffixIcon:
+                    Icon(Icons.lock_outline_rounded, color: Colors.white),
                 HintText: "Your Password",
                 SuffixIcon: IconButton(
                   icon: Icon(_isVisiblePassword != true
@@ -84,11 +85,12 @@ class _LoginPageState extends State<LoginPage> {
                   Text(
                     "Forgot password?",
                     style: TextStyle(
-                        color: colores.secundarydark, fontSize: size.width * .04),
+                        color: colores.secundarydark,
+                        fontSize: size.width * .04),
                   ),
                 ],
               ),
-               Spacing(value: 0.04),
+              Spacing(value: 0.04),
               ACtionButton(
                 widget: Text(
                   "Sign In",
@@ -99,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 onClicked: () {},
               ),
-               Spacing(value: 0.04),
+              Spacing(value: 0.04),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: size.width * .3),
                 child: Row(
@@ -126,7 +128,7 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
               ),
-               Spacing(value: 0.02),
+              Spacing(value: 0.02),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -144,7 +146,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ],
               ),
-               Spacing(value: 0.04),
+              Spacing(value: 0.04),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -155,19 +157,27 @@ class _LoginPageState extends State<LoginPage> {
                       fontSize: size.width * .04,
                     ),
                   ),
-                  GradientText(
-                    "Sign Up",
-                    gradientType: GradientType.linear,
-                    gradientDirection: GradientDirection.btt,
-                    style: TextStyle(
-                      color: colores.secundarydark,
-                      fontSize: size.width * .04,
-                      fontWeight: FontWeight.w500
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => JoinUsPage(),
+                          ));
+                    },
+                    child: GradientText(
+                      "Sign Up",
+                      gradientType: GradientType.linear,
+                      gradientDirection: GradientDirection.btt,
+                      style: TextStyle(
+                          color: colores.secundarydark,
+                          fontSize: size.width * .04,
+                          fontWeight: FontWeight.w500),
+                      colors: [
+                        colores.primrypurple,
+                        colores.primryorage,
+                      ],
                     ),
-                    colors: [
-                      colores.primrypurple,
-                      colores.primryorage,
-                    ],
                   ),
                 ],
               ),

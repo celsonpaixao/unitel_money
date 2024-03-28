@@ -16,17 +16,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-          scaffoldBackgroundColor: Colores().primerydark,
-          appBarTheme: AppBarTheme(
-            systemOverlayStyle: SystemUiOverlayStyle.light,
-            toolbarHeight: 0,
-            backgroundColor: Colors.transparent,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+        scaffoldBackgroundColor: Colores().primerydark,
+        appBarTheme: AppBarTheme(
+          systemOverlayStyle: SystemUiOverlayStyle.light,
+          toolbarHeight: 0,
+          backgroundColor: Colors.transparent,
+        ),
+        textButtonTheme: TextButtonThemeData(
+          style: ButtonStyle(
+            foregroundColor: MaterialStatePropertyAll(Colors.white),
           ),
-          textButtonTheme: TextButtonThemeData(
-              style: ButtonStyle(
-                  foregroundColor: MaterialStatePropertyAll(Colors.white)))),
+        ),
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
+      ),
       home: WelcomePage(),
     );
   }
