@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:unitel_money/pages/authentication/forgotpassword/forgotpasswordpage.dart';
 import 'package:unitel_money/pages/authentication/joinus/joinuspage.dart';
 import 'package:unitel_money/pages/authentication/login/components/card_social.dart';
 import 'package:unitel_money/public/components/actionbutton.dart';
@@ -82,11 +84,20 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ],
                   ),
-                  Text(
-                    "Forgot password?",
-                    style: TextStyle(
-                        color: colores.secundarydark,
-                        fontSize: size.width * .04),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ForgotPasswordPage(),
+                          ));
+                    },
+                    child: Text(
+                      "Forgot password?",
+                      style: TextStyle(
+                          color: colores.secundarydark,
+                          fontSize: size.width * .04),
+                    ),
                   ),
                 ],
               ),
