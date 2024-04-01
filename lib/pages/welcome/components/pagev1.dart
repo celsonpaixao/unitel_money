@@ -48,7 +48,7 @@ class Pagev1 extends StatelessWidget {
           ),
           Spacing(value: .03),
           SizedBox(
-            width: size.width * .7,
+            width: size.width * .9,
             child: FittedBox(
               child: Text(
                 "Aproveite o momento para reservar o que\n deseja comer no dia de hoje, não espere o dia\n de amanhã.",

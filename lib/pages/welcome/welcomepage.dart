@@ -18,17 +18,17 @@ class WelcomePage extends StatefulWidget {
 
 class _WelcomePageState extends State<WelcomePage> {
   var colores = Colores();
-  late PageController pagController; // Declare pagController
+  late PageController pagController;
 
   late Timer _timer;
 
-  List<Widget> scrollpages = []; // Declare scrollpages here
+  List<Widget> scrollpages = [];
 
   @override
   void initState() {
     super.initState();
     pagController = PageController(initialPage: 0);
-    _startTimer(); // Start the timer in initState
+    _startTimer();
   }
 
   @override
@@ -70,18 +70,18 @@ class _WelcomePageState extends State<WelcomePage> {
         children: [
           SizedBox(height: size.height * 0.05),
           SizedBox(
-            height: size.height * 0.7, // Defina uma altura fixa para o PageView
+            height: size.height * 0.7,
             child: PageView.builder(
-              controller: pagController, // Use pagController here
+              controller: pagController,
               itemCount: scrollpages.length,
               itemBuilder: (context, index) {
                 return scrollpages[index];
               },
             ),
           ),
-        //  SizedBox(height: size.height * 0.02),
+          //  SizedBox(height: size.height * 0.02),
           SmoothPageIndicator(
-            controller: pagController, // Use pagController here
+            controller: pagController,
             count: scrollpages.length,
             effect: ScaleEffect(
               dotWidth: size.width * 0.006,

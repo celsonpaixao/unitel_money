@@ -17,7 +17,7 @@ class ACtionButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        width: size.width,
+        width: size.width * .9,
         height: size.height * .06,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),

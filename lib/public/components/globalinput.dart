@@ -15,48 +15,52 @@ class GlobalInput extends StatelessWidget {
     this.SuffixIcon,
     this.HintText,
     this.OnChang,
-    required this.Visibillity, required this.type,
+    required this.Visibillity,
+    required this.type,
   });
 
   @override
   Widget build(BuildContext context) {
     var colores = Colores();
     var size = MediaQuery.of(context).size;
-    return TextFormField(
-      obscureText: Visibillity,
-      scrollPadding: EdgeInsets.only(left: 30),
-      keyboardType: type,
-      style: TextStyle(
-        color: colores.secundarydark,
-        fontSize: size.width * 0.04,
-      ),
-      maxLines: 1,
-      decoration: InputDecoration(
-        hintText: HintText,
-        hintStyle: TextStyle(
-            color: colores.secundarydark,
-            fontSize: size.width * 0.035,
-            fontWeight: FontWeight.w400),
-        prefixIcon: PreffixIcon,
-        suffixIcon: SuffixIcon,
-        filled: true,
-        contentPadding: EdgeInsets.only(
-          left: size.width * 0.05,
-          top: size.height * 0.01,
-          bottom: size.height * 0.01,
+    return Container(
+      width: MediaQuery.of(context).size.width * .9,
+      child: TextFormField(
+        obscureText: Visibillity,
+        scrollPadding: EdgeInsets.only(left: 30),
+        keyboardType: type,
+        style: TextStyle(
+          color: colores.secundarydark,
+          fontSize: size.width * 0.04,
         ),
-        fillColor: colores.dark3,
-        focusedBorder: GradientOutlineInputBorder(
-          gradient: LinearGradient(
-            colors: [
-              colores.primryorage,
-              colores.primrypurple,
-            ],
+        maxLines: 1,
+        decoration: InputDecoration(
+          hintText: HintText,
+          hintStyle: TextStyle(
+              color: colores.secundarydark,
+              fontSize: size.width * 0.035,
+              fontWeight: FontWeight.w400),
+          prefixIcon: PreffixIcon,
+          suffixIcon: SuffixIcon,
+          filled: true,
+          contentPadding: EdgeInsets.only(
+            left: size.width * 0.05,
+            top: size.height * 0.01,
+            bottom: size.height * 0.01,
           ),
-        ),
-        disabledBorder: InputBorder.none,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(3),
+          fillColor: colores.dark3,
+          focusedBorder: GradientOutlineInputBorder(
+            gradient: LinearGradient(
+              colors: [
+                colores.primryorage,
+                colores.primrypurple,
+              ],
+            ),
+          ),
+          disabledBorder: InputBorder.none,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(3),
+          ),
         ),
       ),
     );
